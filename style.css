@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    padding: 10px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.user-score, .computer-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+#user-label, #computer-label {
+    font-size: 22px;
+    margin-bottom: 5px;
+    background: #16a085;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+#user-score, #computer-score {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.colon {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.result {
+    margin: 30px 0;
+}
+
+#result-message {
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+}
+
+.choice {
+    margin: 0 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+}
+
+.choice img {
+    width: 100px;
+    height: 100px;
+}
+
+.message {
+    margin-top: 50px;
+    font-size: 20px;
+    animation: glow 1.5s ease-in-out infinite;
+}
+
+#reset-btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 20px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#reset-btn:hover {
+    background: #c0392b;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #fff; }
+    50% { text-shadow: 0 0 20px #f39c12, 0 0 30px #f1c40f; }
+    100% { text-shadow: 0 0 10px #fff; }
+}
+
+.win-glow {
+    box-shadow: 0 0 20px #2ecc71;
+}
+
+.lose-glow {
+    box-shadow: 0 0 20px #e74c3c;
+}
+
+.draw-glow {
+    box-shadow: 0 0 20px #f39c12;
+}
